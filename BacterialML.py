@@ -71,4 +71,6 @@ class BacterialML:
         bacterial_model.wrap.train(epochs = 10)
         bacterial_model.evaluate(incl_chromosome = ["chr"])
         bacterial_model.predict(incl_chromosome = ["chr"], chrom_size = "self.size")
+        # if you want to take all the chromosome sizes then 
+        bacterial_model.predict(incl_chromosome = ["chr"], chrom_size = "self.size.estimate")
         bacterial_model.wrap.save(path = "self.__path", save_model = True)
